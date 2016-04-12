@@ -1,0 +1,20 @@
+localhost:
+  PHPWORKFLOW_DIR: /vendor/mrfabulous/phpworkflow/
+  PHPWORKFLOW_LOGGER_CONFIG: /vendor/mrfabulous/phpworkflow/logger_config.xml
+  PHPWORKFLOW_MEMCACHE_CONFIG: /vendor/mrfabulous/phpworkflow/memcache.yml
+  PHPWORKFLOW_MEMCACHE_ENVIRONMENT: localhost
+  PHPWORKFLOW_SMARTY_TEMPLATE_DIR: /vendor/mrfabulous/phpworkflow/templates/
+  PHPWORKFLOW_TRIGGER_DIR: /vendor/mrfabulous/phpworkflow/generated-classes/PHPWorkFlow/Trigger/
+  PHPWORKFLOW_PROPEL_CONF: /vendor/mrfabulous/phpworkflow/src/PHPWorkFlow/generated-conf/config.php
+  PHPWORKFLOW_SMARTY_TEMPLATE_CONFIGS_DIR: /vendor/mrfabulous/phpworkflow/config/'
+  PHPWORKFLOW_SMARTY_TEMPLATE_CACHE_DIR: /vendor/mrfabulous/phpworkflow/cache/
+  PHPWORKFLOW_ARTIFACTS_DIR: /vendor/mrfabulous/phpworkflow/artifacts/
+  PHPWORKFLOW_RABBIT_CONFIG: /vendor/mrfabulous/phpworkflow/rabbitmq.yml
+  PHPWORKFLOW_ENVIRONMENT: DEVELOPMENT
+  WRITE_LOGS_TO_SYSOUT: false
+  ExceptionNotificationLongSwitch: false
+  LogTriggerActivity: true
+  UseCache: true
+  CachingMethod: memcache
+  CacheUniqueKeySuffix: GB21Dal17
+

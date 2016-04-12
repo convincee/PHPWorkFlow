@@ -1,0 +1,1428 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<pnml>
+  <net type="http://www.yasper.org/specs/epnml-1.1" id="do72">
+    <name>
+      <text>Test Work Flow</text>
+    </name>
+    <description>
+      <text>{}</text>
+    </description>
+    <toolspecific tool="Yasper" version="1.2.4020.34351">
+      <roles xmlns="http://www.yasper.org/specs/epnml-1.1/toolspec" />
+    </toolspecific>
+    <place id="pl1">
+      <name>
+        <text>PL1</text>
+      </name>
+      <description>
+        <text>{"PlaceType":"start_place"}</text>
+      </description>
+      <graphics>
+        <position x="66" y="300" />
+        <dimension x="20" y="20" />
+      </graphics>
+    </place>
+    <place id="pl10">
+      <name>
+        <text>PL10</text>
+      </name>
+      <description>
+        <text>{"PlaceType":"intermediate_place"}</text>
+      </description>
+      <graphics>
+        <position x="627" y="429" />
+        <dimension x="20" y="20" />
+      </graphics>
+    </place>
+    <place id="pl11">
+      <name>
+        <text>PL11</text>
+      </name>
+      <description>
+        <text>{"PlaceType":"intermediate_place"}</text>
+      </description>
+      <graphics>
+        <position x="627" y="528" />
+        <dimension x="20" y="20" />
+      </graphics>
+    </place>
+    <place id="pl12">
+      <name>
+        <text>PL12</text>
+      </name>
+      <description>
+        <text>{"PlaceType":"intermediate_place"}</text>
+      </description>
+      <graphics>
+        <position x="825" y="66" />
+        <dimension x="20" y="20" />
+      </graphics>
+    </place>
+    <place id="pl13">
+      <name>
+        <text>PL13</text>
+      </name>
+      <description>
+        <text>{"PlaceType":"intermediate_place"}</text>
+      </description>
+      <graphics>
+        <position x="825" y="165" />
+        <dimension x="20" y="20" />
+      </graphics>
+    </place>
+    <place id="pl14">
+      <name>
+        <text>PL14</text>
+      </name>
+      <description>
+        <text>{"PlaceType":"intermediate_place"}</text>
+      </description>
+      <graphics>
+        <position x="825" y="264" />
+        <dimension x="20" y="20" />
+      </graphics>
+    </place>
+    <place id="pl15">
+      <name>
+        <text>PL15</text>
+      </name>
+      <description>
+        <text>{"PlaceType":"intermediate_place"}</text>
+      </description>
+      <graphics>
+        <position x="825" y="330" />
+        <dimension x="20" y="20" />
+      </graphics>
+    </place>
+    <place id="pl16">
+      <name>
+        <text>PL16</text>
+      </name>
+      <description>
+        <text>{"PlaceType":"intermediate_place"}</text>
+      </description>
+      <graphics>
+        <position x="825" y="429" />
+        <dimension x="20" y="20" />
+      </graphics>
+    </place>
+    <place id="pl17">
+      <name>
+        <text>PL17</text>
+      </name>
+      <description>
+        <text>{"PlaceType":"intermediate_place"}</text>
+      </description>
+      <graphics>
+        <position x="825" y="528" />
+        <dimension x="20" y="20" />
+      </graphics>
+    </place>
+    <place id="pl18">
+      <name>
+        <text>PL18</text>
+      </name>
+      <description>
+        <text>{"PlaceType":"intermediate_place"}</text>
+      </description>
+      <graphics>
+        <position x="1023" y="264" />
+        <dimension x="20" y="20" />
+      </graphics>
+    </place>
+    <place id="pl19">
+      <name>
+        <text>PL19</text>
+      </name>
+      <description>
+        <text>{"PlaceType":"intermediate_place"}</text>
+      </description>
+      <graphics>
+        <position x="1023" y="528" />
+        <dimension x="20" y="20" />
+      </graphics>
+    </place>
+    <place id="pl2">
+      <name>
+        <text>PL2</text>
+      </name>
+      <description>
+        <text>{"PlaceType":"intermediate_place"}</text>
+      </description>
+      <graphics>
+        <position x="429" y="528" />
+        <dimension x="20" y="20" />
+      </graphics>
+    </place>
+    <place id="pl20">
+      <name>
+        <text>PL20</text>
+      </name>
+      <description>
+        <text>{"PlaceType":"end_place"}</text>
+      </description>
+      <graphics>
+        <position x="1386" y="594" />
+        <dimension x="20" y="20" />
+      </graphics>
+    </place>
+    <place id="pl21">
+      <name>
+        <text>PL21</text>
+      </name>
+      <description>
+        <text>{"PlaceType":"intermediate_place"}</text>
+      </description>
+      <graphics>
+        <position x="429" y="66" />
+        <dimension x="20" y="20" />
+      </graphics>
+    </place>
+    <place id="pl24">
+      <name>
+        <text>PL24</text>
+      </name>
+      <description>
+        <text>{"PlaceType":"intermediate_place"}</text>
+      </description>
+      <graphics>
+        <position x="495" y="726" />
+        <dimension x="20" y="20" />
+      </graphics>
+    </place>
+    <place id="pl25">
+      <name>
+        <text>PL25</text>
+      </name>
+      <description>
+        <text>{"PlaceType":"intermediate_place"}</text>
+      </description>
+      <graphics>
+        <position x="363" y="660" />
+        <dimension x="20" y="20" />
+      </graphics>
+    </place>
+    <place id="pl26">
+      <name>
+        <text>PL26</text>
+      </name>
+      <description>
+        <text>{"PlaceType":"intermediate_place"}</text>
+      </description>
+      <graphics>
+        <position x="264" y="759" />
+        <dimension x="20" y="20" />
+      </graphics>
+    </place>
+    <place id="pl28">
+      <name>
+        <text>PL28</text>
+      </name>
+      <description>
+        <text>{"PlaceType":"intermediate_place"}</text>
+      </description>
+      <graphics>
+        <position x="396" y="726" />
+        <dimension x="20" y="20" />
+      </graphics>
+    </place>
+    <place id="pl29">
+      <name>
+        <text>PL29</text>
+      </name>
+      <description>
+        <text>{"PlaceType":"intermediate_place"}</text>
+      </description>
+      <graphics>
+        <position x="1122" y="165" />
+        <dimension x="20" y="20" />
+      </graphics>
+    </place>
+    <place id="pl31">
+      <name>
+        <text>PL31</text>
+      </name>
+      <description>
+        <text>{"PlaceType":"intermediate_place"}</text>
+      </description>
+      <graphics>
+        <position x="1155" y="429" />
+        <dimension x="20" y="20" />
+      </graphics>
+    </place>
+    <place id="pl33">
+      <name>
+        <text>PL33</text>
+      </name>
+      <description>
+        <text>{"PlaceType":"intermediate_place"}</text>
+      </description>
+      <graphics>
+        <position x="1320" y="165" />
+        <dimension x="20" y="20" />
+      </graphics>
+    </place>
+    <place id="pl34">
+      <name>
+        <text>PL34</text>
+      </name>
+      <description>
+        <text>{"PlaceType":"intermediate_place"}</text>
+      </description>
+      <graphics>
+        <position x="1320" y="429" />
+        <dimension x="20" y="20" />
+      </graphics>
+    </place>
+    <place id="pl36">
+      <name>
+        <text>PL36</text>
+      </name>
+      <description>
+        <text>{"PlaceType":"intermediate_place"}</text>
+      </description>
+      <graphics>
+        <position x="231" y="297" />
+        <dimension x="20" y="20" />
+      </graphics>
+    </place>
+    <place id="pl38">
+      <name>
+        <text>PL38</text>
+      </name>
+      <description>
+        <text>{"PlaceType":"intermediate_place"}</text>
+      </description>
+      <graphics>
+        <position x="462" y="297" />
+        <dimension x="20" y="20" />
+      </graphics>
+    </place>
+    <place id="pl4">
+      <name>
+        <text>PL4</text>
+      </name>
+      <description>
+        <text>{"PlaceType":"intermediate_place"}</text>
+      </description>
+      <graphics>
+        <position x="231" y="66" />
+        <dimension x="20" y="20" />
+      </graphics>
+    </place>
+    <place id="pl41">
+      <name>
+        <text>PL41</text>
+      </name>
+      <description>
+        <text>{"PlaceType":"intermediate_place"}</text>
+      </description>
+      <graphics>
+        <position x="330" y="132" />
+        <dimension x="20" y="20" />
+      </graphics>
+    </place>
+    <place id="pl44">
+      <name>
+        <text>PL44</text>
+      </name>
+      <description>
+        <text>{"PlaceType":"intermediate_place"}</text>
+      </description>
+      <graphics>
+        <position x="1320" y="297" />
+        <dimension x="20" y="20" />
+      </graphics>
+    </place>
+    <place id="pl5">
+      <name>
+        <text>PL5</text>
+      </name>
+      <description>
+        <text>{"PlaceType":"intermediate_place"}</text>
+      </description>
+      <graphics>
+        <position x="264" y="528" />
+        <dimension x="20" y="20" />
+      </graphics>
+    </place>
+    <place id="pl50">
+      <name>
+        <text>PL50</text>
+      </name>
+      <description>
+        <text>{"PlaceType":"intermediate_place"}</text>
+      </description>
+      <graphics>
+        <position x="1386" y="363" />
+        <dimension x="20" y="20" />
+      </graphics>
+    </place>
+    <place id="pl52">
+      <name>
+        <text>PL52</text>
+      </name>
+      <description>
+        <text>{"PlaceType":"intermediate_place"}</text>
+      </description>
+      <graphics>
+        <position x="297" y="462" />
+        <dimension x="20" y="20" />
+      </graphics>
+    </place>
+    <place id="pl6">
+      <name>
+        <text>PL6</text>
+      </name>
+      <description>
+        <text>{"PlaceType":"intermediate_place"}</text>
+      </description>
+      <graphics>
+        <position x="627" y="66" />
+        <dimension x="20" y="20" />
+      </graphics>
+    </place>
+    <place id="pl7">
+      <name>
+        <text>PL7</text>
+      </name>
+      <description>
+        <text>{"PlaceType":"intermediate_place"}</text>
+      </description>
+      <graphics>
+        <position x="627" y="165" />
+        <dimension x="20" y="20" />
+      </graphics>
+    </place>
+    <place id="pl8">
+      <name>
+        <text>PL8</text>
+      </name>
+      <description>
+        <text>{"PlaceType":"intermediate_place"}</text>
+      </description>
+      <graphics>
+        <position x="627" y="264" />
+        <dimension x="20" y="20" />
+      </graphics>
+    </place>
+    <place id="pl9">
+      <name>
+        <text>PL9</text>
+      </name>
+      <description>
+        <text>{"PlaceType":"intermediate_place"}</text>
+      </description>
+      <graphics>
+        <position x="627" y="330" />
+        <dimension x="20" y="20" />
+      </graphics>
+    </place>
+    <transition id="tr0">
+      <name>
+        <text>TR0</text>
+      </name>
+      <description>
+        <text>{"transition_type":"emitter"}</text>
+      </description>
+      <graphics>
+        <position x="66" y="99" />
+        <dimension x="32" y="32" />
+      </graphics>
+      <toolspecific tool="Yasper" version="1.2.4020.34351">
+        <emitor xmlns="http://www.yasper.org/specs/epnml-1.1/toolspec">
+          <text>true</text>
+        </emitor>
+      </toolspecific>
+    </transition>
+    <transition id="tr1">
+      <name>
+        <text>TR1 Add Org Type1</text>
+      </name>
+      <description>
+        <text>{"transition_type":"user","routes":["\/example_tr1"]}</text>
+      </description>
+      <graphics>
+        <position x="264" y="198" />
+        <dimension x="32" y="32" />
+      </graphics>
+    </transition>
+    <transition id="tr10">
+      <name>
+        <text>TR10 Add Build User 24x7 Phone</text>
+      </name>
+      <description>
+        <text>{"transition_type":"user","routes":["\/example_tr10"]}</text>
+      </description>
+      <graphics>
+        <position x="726" y="429" />
+        <dimension x="32" y="32" />
+      </graphics>
+    </transition>
+    <transition id="tr11">
+      <name>
+        <text>TR11 Add Build User Cell Phone</text>
+      </name>
+      <description>
+        <text>{"transition_type":"user","routes":["\/example_tr11"]}</text>
+      </description>
+      <graphics>
+        <position x="726" y="528" />
+        <dimension x="32" y="32" />
+      </graphics>
+    </transition>
+    <transition id="tr12">
+      <name>
+        <text>TR12 Email Super</text>
+      </name>
+      <description>
+        <text>{"transition_type":"notification","notifications":{"email":["jim@schlies.com"],"SMS":["8312278075"]}}</text>
+      </description>
+      <graphics>
+        <position x="924" y="264" />
+        <dimension x="32" y="32" />
+      </graphics>
+    </transition>
+    <transition id="tr13">
+      <name>
+        <text>TR13 Email Super</text>
+      </name>
+      <description>
+        <text>{"transition_type":"notification","notifications":{"email":["jim@schlies.com"],"SMS":["8312278075"]}}</text>
+      </description>
+      <graphics>
+        <position x="924" y="528" />
+        <dimension x="32" y="32" />
+      </graphics>
+    </transition>
+    <transition id="tr14">
+      <name>
+        <text>TR14 Email Super Success</text>
+      </name>
+      <description>
+        <text>{"transition_type":"auto"}</text>
+      </description>
+      <graphics>
+        <position x="1386" y="495" />
+        <dimension x="32" y="32" />
+      </graphics>
+    </transition>
+    <transition id="tr15">
+      <name>
+        <text>TR15 Email Super Failure</text>
+      </name>
+      <description>
+        <text>{"transition_type":"timed","time_delay":3600}</text>
+      </description>
+      <graphics>
+        <position x="67" y="594" />
+        <dimension x="32" y="32" />
+      </graphics>
+    </transition>
+    <transition id="tr16">
+      <name>
+        <text>TR16 Email Staff Finished With Team Agent</text>
+      </name>
+      <description>
+        <text>{"transition_type":"auto"}</text>
+      </description>
+      <graphics>
+        <position x="1023" y="165" />
+        <dimension x="32" y="32" />
+      </graphics>
+    </transition>
+    <transition id="tr17">
+      <name>
+        <text>TR17 Add Team Agent Fax Phone</text>
+      </name>
+      <description>
+        <text>{"transition_type":"user","routes":["\/example_tr17"]}</text>
+      </description>
+      <graphics>
+        <position x="1221" y="165" />
+        <dimension x="32" y="32" />
+      </graphics>
+    </transition>
+    <transition id="tr18">
+      <name>
+        <text>TR18 Add Build Fax Phone</text>
+      </name>
+      <description>
+        <text>{"transition_type":"user","routes":["\/example_tr18"]}</text>
+      </description>
+      <graphics>
+        <position x="1222" y="429" />
+        <dimension x="32" y="32" />
+      </graphics>
+    </transition>
+    <transition id="tr19">
+      <name>
+        <text>TR19 Create Team Agent Config</text>
+      </name>
+      <description>
+        <text>{"transition_type":"user","routes":["\/example_tr19"]}</text>
+      </description>
+      <graphics>
+        <position x="528" y="66" />
+        <dimension x="32" y="32" />
+      </graphics>
+    </transition>
+    <transition id="tr2">
+      <name>
+        <text>TR2 Invite Team Agent</text>
+      </name>
+      <description>
+        <text>{"transition_type":"user","routes":["\/example_tr2","\/example_tr2a","\/example_tr2b"]}</text>
+      </description>
+      <graphics>
+        <position x="165" y="66" />
+        <dimension x="32" y="32" />
+      </graphics>
+    </transition>
+    <transition id="tr20">
+      <name>
+        <text>TR20 Create Build User Config</text>
+      </name>
+      <description>
+        <text>{"transition_type":"user","routes":["\/example_tr20","\/example_tr20a"]}</text>
+      </description>
+      <graphics>
+        <position x="528" y="528" />
+        <dimension x="32" y="32" />
+      </graphics>
+    </transition>
+    <transition id="tr21">
+      <name>
+        <text>TR21 Email Staff Finished With Build User</text>
+      </name>
+      <description>
+        <text>{"transition_type":"auto"}</text>
+      </description>
+      <graphics>
+        <position x="1023" y="429" />
+        <dimension x="32" y="32" />
+      </graphics>
+    </transition>
+    <transition id="tr22">
+      <name>
+        <text>TR22 Build User Registers Loop 1</text>
+      </name>
+      <description>
+        <text>{"transition_type":"user","routes":["\/example_tr22"]}</text>
+      </description>
+      <graphics>
+        <position x="495" y="660" />
+        <dimension x="32" y="32" />
+      </graphics>
+    </transition>
+    <transition id="tr23">
+      <name>
+        <text>TR23 Add Org Type2</text>
+      </name>
+      <description>
+        <text>{"transition_type":"user","routes":["\/example_tr23"]}</text>
+      </description>
+      <graphics>
+        <position x="330" y="297" />
+        <dimension x="32" y="32" />
+      </graphics>
+    </transition>
+    <transition id="tr26">
+      <name>
+        <text>TR26 Build User Registers Loop 2</text>
+      </name>
+      <description>
+        <text>{"transition_type":"user","routes":["\/example_tr26"]}</text>
+      </description>
+      <graphics>
+        <position x="495" y="792" />
+        <dimension x="32" y="32" />
+      </graphics>
+    </transition>
+    <transition id="tr27">
+      <name>
+        <text>TR27 Add Org Type3</text>
+      </name>
+      <description>
+        <text>{"transition_type":"user","routes":["\/example_tr27"]}</text>
+      </description>
+      <graphics>
+        <position x="264" y="396" />
+        <dimension x="32" y="32" />
+      </graphics>
+    </transition>
+    <transition id="tr3">
+      <name>
+        <text>TR3 Invite Build User</text>
+      </name>
+      <description>
+        <text>{"transition_type":"user","routes":["\/example_tr3","\/example_tr3a"]}</text>
+      </description>
+      <graphics>
+        <position x="132" y="528" />
+        <dimension x="32" y="32" />
+      </graphics>
+    </transition>
+    <transition id="tr30">
+      <name>
+        <text>TR30 Build User Registers Loop 1</text>
+      </name>
+      <description>
+        <text>{"transition_type":"user","routes":["\/example_tr30"]}</text>
+      </description>
+      <graphics>
+        <position x="330" y="792" />
+        <dimension x="32" y="32" />
+      </graphics>
+    </transition>
+    <transition id="tr31">
+      <name>
+        <text>TR31 Build User Registers Loop 1</text>
+      </name>
+      <description>
+        <text>{"transition_type":"user","routes":["\/example_tr31"]}</text>
+      </description>
+      <graphics>
+        <position x="264" y="660" />
+        <dimension x="32" y="32" />
+      </graphics>
+    </transition>
+    <transition id="tr4">
+      <name>
+        <text>TR4 Team Agent Registers</text>
+      </name>
+      <description>
+        <text>{"transition_type":"user","routes":["\/example_tr4"]}</text>
+      </description>
+      <graphics>
+        <position x="330" y="66" />
+        <dimension x="32" y="32" />
+      </graphics>
+    </transition>
+    <transition id="tr45">
+      <name>
+        <text>TR45 Email Staff Starting Add Organization</text>
+      </name>
+      <description>
+        <text>{"transition_type":"user","routes":["\/example_tr45"]}</text>
+      </description>
+      <graphics>
+        <position x="132" y="297" />
+        <dimension x="32" y="32" />
+      </graphics>
+    </transition>
+    <transition id="tr49">
+      <name>
+        <text>TR49 Email Staff Start Adding Users</text>
+      </name>
+      <description>
+        <text>{"transition_type":"auto","commands":[{"seq":1,"command_string":"ls -al"},{"seq":2,"command_string":"dir  -c %param1 -d %param2 %param3 "}]}</text>
+      </description>
+      <graphics>
+        <position x="561" y="297" />
+        <dimension x="32" y="32" />
+      </graphics>
+    </transition>
+    <transition id="tr5">
+      <name>
+        <text>TR5 Build User Registers</text>
+      </name>
+      <description>
+        <text>{"transition_type":"gate","gates":[{"value":"false","target_transition":"tr22"},{"value":"true","target_transition":"tr20"}]}</text>
+      </description>
+      <graphics>
+        <position x="363" y="528" />
+        <dimension x="32" y="32" />
+      </graphics>
+    </transition>
+    <transition id="tr56">
+      <name>
+        <text>TR56 Email Staff Finished Adding Users</text>
+      </name>
+      <description>
+        <text>{"transition_type":"auto"}</text>
+      </description>
+      <graphics>
+        <position x="1188" y="297" />
+        <dimension x="32" y="32" />
+      </graphics>
+    </transition>
+    <transition id="tr6">
+      <name>
+        <text>TR6 Add Team Agent Work Phone</text>
+      </name>
+      <description>
+        <text>{"transition_type":"user","routes":["\/example_tr6"]}</text>
+      </description>
+      <graphics>
+        <position x="728" y="66" />
+        <dimension x="32" y="32" />
+      </graphics>
+    </transition>
+    <transition id="tr65">
+      <name>
+        <text>TR65 Email Staff Finished Adding Organization</text>
+      </name>
+      <description>
+        <text>{"transition_type":"auto"}</text>
+      </description>
+      <graphics>
+        <position x="1386" y="297" />
+        <dimension x="32" y="32" />
+      </graphics>
+    </transition>
+    <transition id="tr7">
+      <name>
+        <text>TR7 Add Team Agent Home Phone</text>
+      </name>
+      <description>
+        <text>{"transition_type":"user","routes":["\/example_tr7","\/example_tr7a","\/example_tr7b"]}</text>
+      </description>
+      <graphics>
+        <position x="726" y="165" />
+        <dimension x="32" y="32" />
+      </graphics>
+    </transition>
+    <transition id="tr8">
+      <name>
+        <text>TR8 Add Team Agent Cell Phone</text>
+      </name>
+      <description>
+        <text>{"transition_type":"user","routes":["\/example_tr8","\/example_tr8a","\/example_tr8b"]}</text>
+      </description>
+      <graphics>
+        <position x="726" y="264" />
+        <dimension x="32" y="32" />
+      </graphics>
+    </transition>
+    <transition id="tr9">
+      <name>
+        <text>TR9 Add Build User Work Phone</text>
+      </name>
+      <description>
+        <text>{"transition_type":"user","routes":["\/example_tr9","\/example_tr9a"]}</text>
+      </description>
+      <graphics>
+        <position x="726" y="330" />
+        <dimension x="32" y="32" />
+      </graphics>
+    </transition>
+    <transition id="tr999">
+      <name>
+        <text>TR999</text>
+      </name>
+      <description>
+        <text>{"transition_type":"consumer"}</text>
+      </description>
+      <graphics>
+        <position x="1551" y="594" />
+        <dimension x="32" y="32" />
+      </graphics>
+      <toolspecific tool="Yasper" version="1.2.4020.34351">
+        <collector xmlns="http://www.yasper.org/specs/epnml-1.1/toolspec">
+          <text>true</text>
+        </collector>
+      </toolspecific>
+    </transition>
+    <arc id="a3" source="tr12" target="pl18">
+      <name>
+        <text>tr12 -&gt; pl18</text>
+      </name>
+      <description>
+        <text>{"arc_type":"seq"}</text>
+      </description>
+    </arc>
+    <arc id="a4" source="pl34" target="tr56">
+      <name>
+        <text>pl34 -&gt; tr56</text>
+      </name>
+      <description>
+        <text>{"arc_type":"and_join"}</text>
+      </description>
+    </arc>
+    <arc id="a5" source="tr65" target="pl50">
+      <name>
+        <text>tr65 -&gt; pl50</text>
+      </name>
+      <description>
+        <text>{"arc_type":"seq"}</text>
+      </description>
+    </arc>
+    <arc id="a6" source="pl44" target="tr65">
+      <name>
+        <text>pl44 -&gt; tr65</text>
+      </name>
+      <description>
+        <text>{"arc_type":"seq"}</text>
+      </description>
+    </arc>
+    <arc id="a7" source="pl50" target="tr14">
+      <name>
+        <text>pl50 -&gt; tr14</text>
+      </name>
+      <description>
+        <text>{"arc_type":"seq"}</text>
+      </description>
+    </arc>
+    <arc id="a8" source="tr49" target="pl52">
+      <name>
+        <text>tr49 -&gt; pl52</text>
+      </name>
+      <description>
+        <text>{"arc_type":"and_split"}</text>
+      </description>
+    </arc>
+    <arc id="a9" source="pl52" target="tr3">
+      <name>
+        <text>pl52 -&gt; tr3</text>
+      </name>
+      <description>
+        <text>{"arc_type":"seq"}</text>
+      </description>
+    </arc>
+    <arc id="a10" source="pl41" target="tr2">
+      <name>
+        <text>pl41 -&gt; tr2</text>
+      </name>
+      <description>
+        <text>{"arc_type":"seq"}</text>
+      </description>
+    </arc>
+    <arc id="a11" source="tr21" target="pl31">
+      <name>
+        <text>tr21 -&gt; pl31</text>
+      </name>
+      <description>
+        <text>{"arc_type":"seq"}</text>
+      </description>
+    </arc>
+    <arc id="a12" source="pl31" target="tr18">
+      <name>
+        <text>pl31 -&gt; tr18</text>
+      </name>
+      <description>
+        <text>{"arc_type":"seq"}</text>
+      </description>
+    </arc>
+    <arc id="a13" source="tr18" target="pl34">
+      <name>
+        <text>tr18 -&gt; pl34</text>
+      </name>
+      <description>
+        <text>{"arc_type":"seq"}</text>
+      </description>
+    </arc>
+    <arc id="a14" source="pl17" target="tr13">
+      <name>
+        <text>pl17 -&gt; tr13</text>
+      </name>
+      <description>
+        <text>{"arc_type":"seq"}</text>
+      </description>
+    </arc>
+    <arc id="a15" source="tr0" target="pl1">
+      <name>
+        <text>tr0 -&gt; pl1</text>
+      </name>
+      <description>
+        <text>{"arc_type":"seq"}</text>
+      </description>
+    </arc>
+    <arc id="a16" source="pl20" target="tr999">
+      <name>
+        <text>pl20 -&gt; tr999</text>
+      </name>
+      <description>
+        <text>{"arc_type":"seq"}</text>
+      </description>
+    </arc>
+    <arc id="a17" source="pl10" target="tr10">
+      <name>
+        <text>pl10 -&gt; tr10</text>
+      </name>
+      <description>
+        <text>{"arc_type":"seq"}</text>
+      </description>
+    </arc>
+    <arc id="a18" source="tr10" target="pl16">
+      <name>
+        <text>tr10 -&gt; pl16</text>
+      </name>
+      <description>
+        <text>{"arc_type":"seq"}</text>
+      </description>
+    </arc>
+    <arc id="a19" source="pl11" target="tr11">
+      <name>
+        <text>pl11 -&gt; tr11</text>
+      </name>
+      <description>
+        <text>{"arc_type":"seq"}</text>
+      </description>
+    </arc>
+    <arc id="a20" source="tr11" target="pl17">
+      <name>
+        <text>tr11 -&gt; pl17</text>
+      </name>
+      <description>
+        <text>{"arc_type":"seq"}</text>
+      </description>
+    </arc>
+    <arc id="a21" source="pl14" target="tr12">
+      <name>
+        <text>pl14 -&gt; tr12</text>
+      </name>
+      <description>
+        <text>{"arc_type":"seq"}</text>
+      </description>
+    </arc>
+    <arc id="a22" source="tr13" target="pl19">
+      <name>
+        <text>tr13 -&gt; pl19</text>
+      </name>
+      <description>
+        <text>{"arc_type":"seq"}</text>
+      </description>
+    </arc>
+    <arc id="a23" source="tr14" target="pl20">
+      <name>
+        <text>tr14 -&gt; pl20</text>
+      </name>
+      <description>
+        <text>{"arc_type":"or_join"}</text>
+      </description>
+    </arc>
+    <arc id="a24" source="pl1" target="tr15">
+      <name>
+        <text>pl1 -&gt; tr15</text>
+      </name>
+      <description>
+        <text>{"arc_type":"or_split"}</text>
+      </description>
+    </arc>
+    <arc id="a25" source="tr15" target="pl20">
+      <name>
+        <text>tr15 -&gt; pl20</text>
+      </name>
+      <description>
+        <text>{"arc_type":"or_join"}</text>
+      </description>
+    </arc>
+    <arc id="a26" source="tr2" target="pl4">
+      <name>
+        <text>tr2 -&gt; pl4</text>
+      </name>
+      <description>
+        <text>{"arc_type":"seq"}</text>
+      </description>
+    </arc>
+    <arc id="a27" source="tr3" target="pl5">
+      <name>
+        <text>tr3 -&gt; pl5</text>
+      </name>
+      <description>
+        <text>{"arc_type":"or_join"}</text>
+      </description>
+    </arc>
+    <arc id="a28" source="pl4" target="tr4">
+      <name>
+        <text>pl4 -&gt; tr4</text>
+      </name>
+      <description>
+        <text>{"arc_type":"seq"}</text>
+      </description>
+    </arc>
+    <arc id="a29" source="pl5" target="tr5">
+      <name>
+        <text>pl5 -&gt; tr5</text>
+      </name>
+      <description>
+        <text>{"arc_type":"seq"}</text>
+      </description>
+    </arc>
+    <arc id="a30" source="tr6" target="pl12">
+      <name>
+        <text>tr6 -&gt; pl12</text>
+      </name>
+      <description>
+        <text>{"arc_type":"seq"}</text>
+      </description>
+    </arc>
+    <arc id="a31" source="pl6" target="tr6">
+      <name>
+        <text>pl6 -&gt; tr6</text>
+      </name>
+      <description>
+        <text>{"arc_type":"seq"}</text>
+      </description>
+    </arc>
+    <arc id="a32" source="tr7" target="pl13">
+      <name>
+        <text>tr7 -&gt; pl13</text>
+      </name>
+      <description>
+        <text>{"arc_type":"seq"}</text>
+      </description>
+    </arc>
+    <arc id="a33" source="pl7" target="tr7">
+      <name>
+        <text>pl7 -&gt; tr7</text>
+      </name>
+      <description>
+        <text>{"arc_type":"seq"}</text>
+      </description>
+    </arc>
+    <arc id="a34" source="tr8" target="pl14">
+      <name>
+        <text>tr8 -&gt; pl14</text>
+      </name>
+      <description>
+        <text>{"arc_type":"seq"}</text>
+      </description>
+    </arc>
+    <arc id="a35" source="pl8" target="tr8">
+      <name>
+        <text>pl8 -&gt; tr8</text>
+      </name>
+      <description>
+        <text>{"arc_type":"seq"}</text>
+      </description>
+    </arc>
+    <arc id="a36" source="tr9" target="pl15">
+      <name>
+        <text>tr9 -&gt; pl15</text>
+      </name>
+      <description>
+        <text>{"arc_type":"seq"}</text>
+      </description>
+    </arc>
+    <arc id="a37" source="pl9" target="tr9">
+      <name>
+        <text>pl9 -&gt; tr9</text>
+      </name>
+      <description>
+        <text>{"arc_type":"seq"}</text>
+      </description>
+    </arc>
+    <arc id="a38" source="pl12" target="tr16">
+      <name>
+        <text>pl12 -&gt; tr16</text>
+      </name>
+      <description>
+        <text>{"arc_type":"and_join"}</text>
+      </description>
+    </arc>
+    <arc id="a39" source="pl13" target="tr16">
+      <name>
+        <text>pl13 -&gt; tr16</text>
+      </name>
+      <description>
+        <text>{"arc_type":"and_join"}</text>
+      </description>
+    </arc>
+    <arc id="a40" source="pl18" target="tr16">
+      <name>
+        <text>pl18 -&gt; tr16</text>
+      </name>
+      <description>
+        <text>{"arc_type":"and_join"}</text>
+      </description>
+    </arc>
+    <arc id="a41" source="pl15" target="tr21">
+      <name>
+        <text>pl15 -&gt; tr21</text>
+      </name>
+      <description>
+        <text>{"arc_type":"and_join"}</text>
+      </description>
+    </arc>
+    <arc id="a42" source="pl16" target="tr21">
+      <name>
+        <text>pl16 -&gt; tr21</text>
+      </name>
+      <description>
+        <text>{"arc_type":"and_join"}</text>
+      </description>
+    </arc>
+    <arc id="a53" source="pl19" target="tr21">
+      <name>
+        <text>pl19 -&gt; tr21</text>
+      </name>
+      <description>
+        <text>{"arc_type":"and_join"}</text>
+      </description>
+    </arc>
+    <arc id="a54" source="pl21" target="tr19">
+      <name>
+        <text>pl21 -&gt; tr19</text>
+      </name>
+      <description>
+        <text>{"arc_type":"seq"}</text>
+      </description>
+    </arc>
+    <arc id="a89" source="tr4" target="pl21">
+      <name>
+        <text>tr4 -&gt; pl21</text>
+      </name>
+      <description>
+        <text>{"arc_type":"seq"}</text>
+      </description>
+    </arc>
+    <arc id="a90" source="tr19" target="pl6">
+      <name>
+        <text>tr19 -&gt; pl6</text>
+      </name>
+      <description>
+        <text>{"arc_type":"and_split"}</text>
+      </description>
+    </arc>
+    <arc id="a91" source="tr19" target="pl7">
+      <name>
+        <text>tr19 -&gt; pl7</text>
+      </name>
+      <description>
+        <text>{"arc_type":"and_split"}</text>
+      </description>
+    </arc>
+    <arc id="a92" source="tr19" target="pl8">
+      <name>
+        <text>tr19 -&gt; pl8</text>
+      </name>
+      <description>
+        <text>{"arc_type":"and_split"}</text>
+      </description>
+    </arc>
+    <arc id="a107" source="tr5" target="pl25">
+      <name>
+        <text>tr5 -&gt; pl25</text>
+      </name>
+      <description>
+        <text>{"arc_type":"seq"}</text>
+      </description>
+    </arc>
+    <arc id="a108" source="tr20" target="pl9">
+      <name>
+        <text>tr20 -&gt; pl9</text>
+      </name>
+      <description>
+        <text>{"arc_type":"and_split"}</text>
+      </description>
+    </arc>
+    <arc id="a109" source="tr20" target="pl10">
+      <name>
+        <text>tr20 -&gt; pl10</text>
+      </name>
+      <description>
+        <text>{"arc_type":"and_split"}</text>
+      </description>
+    </arc>
+    <arc id="a110" source="tr20" target="pl11">
+      <name>
+        <text>tr20 -&gt; pl11</text>
+      </name>
+      <description>
+        <text>{"arc_type":"and_split"}</text>
+      </description>
+    </arc>
+    <arc id="a111" source="tr16" target="pl29">
+      <name>
+        <text>tr16 -&gt; pl29</text>
+      </name>
+      <description>
+        <text>{"arc_type":"seq"}</text>
+      </description>
+    </arc>
+    <arc id="a112" source="pl29" target="tr17">
+      <name>
+        <text>pl29 -&gt; tr17</text>
+      </name>
+      <description>
+        <text>{"arc_type":"seq"}</text>
+      </description>
+    </arc>
+    <arc id="a113" source="tr17" target="pl33">
+      <name>
+        <text>tr17 -&gt; pl33</text>
+      </name>
+      <description>
+        <text>{"arc_type":"seq"}</text>
+      </description>
+    </arc>
+    <arc id="a114" source="pl1" target="tr45">
+      <name>
+        <text>pl1 -&gt; tr45</text>
+      </name>
+      <description>
+        <text>{"arc_type":"or_split"}</text>
+      </description>
+    </arc>
+    <arc id="a115" source="pl38" target="tr49">
+      <name>
+        <text>pl38 -&gt; tr49</text>
+      </name>
+      <description>
+        <text>{"arc_type":"seq"}</text>
+      </description>
+    </arc>
+    <arc id="a116" source="tr1" target="pl38">
+      <name>
+        <text>tr1 -&gt; pl38</text>
+      </name>
+      <description>
+        <text>{"arc_type":"or_join"}</text>
+      </description>
+    </arc>
+    <arc id="a117" source="tr49" target="pl41">
+      <name>
+        <text>tr49 -&gt; pl41</text>
+      </name>
+      <description>
+        <text>{"arc_type":"and_split"}</text>
+      </description>
+    </arc>
+    <arc id="a118" source="pl33" target="tr56">
+      <name>
+        <text>pl33 -&gt; tr56</text>
+      </name>
+      <description>
+        <text>{"arc_type":"and_join"}</text>
+      </description>
+    </arc>
+    <arc id="a119" source="tr56" target="pl44">
+      <name>
+        <text>tr56 -&gt; pl44</text>
+      </name>
+      <description>
+        <text>{"arc_type":"seq"}</text>
+      </description>
+    </arc>
+    <arc id="a120" source="pl36" target="tr23">
+      <name>
+        <text>pl36 -&gt; tr23</text>
+      </name>
+      <description>
+        <text>{"arc_type":"or_split"}</text>
+      </description>
+    </arc>
+    <arc id="a121" source="tr45" target="pl36">
+      <name>
+        <text>tr45 -&gt; pl36</text>
+      </name>
+      <description>
+        <text>{"arc_type":"seq"}</text>
+      </description>
+    </arc>
+    <arc id="a122" source="pl36" target="tr1">
+      <name>
+        <text>pl36 -&gt; tr1</text>
+      </name>
+      <description>
+        <text>{"arc_type":"or_split"}</text>
+      </description>
+    </arc>
+    <arc id="a124" source="pl36" target="tr27">
+      <name>
+        <text>pl36 -&gt; tr27</text>
+      </name>
+      <description>
+        <text>{"arc_type":"or_split"}</text>
+      </description>
+    </arc>
+    <arc id="a125" source="tr23" target="pl38">
+      <name>
+        <text>tr23 -&gt; pl38</text>
+      </name>
+      <description>
+        <text>{"arc_type":"or_join"}</text>
+      </description>
+    </arc>
+    <arc id="a126" source="tr27" target="pl38">
+      <name>
+        <text>tr27 -&gt; pl38</text>
+      </name>
+      <description>
+        <text>{"arc_type":"or_join"}</text>
+      </description>
+    </arc>
+    <arc id="a127" source="tr22" target="pl24">
+      <name>
+        <text>tr22 -&gt; pl24</text>
+      </name>
+      <description>
+        <text>{"arc_type":"seq"}</text>
+      </description>
+    </arc>
+    <arc id="a133" source="pl24" target="tr26">
+      <name>
+        <text>pl24 -&gt; tr26</text>
+      </name>
+      <description>
+        <text>{"arc_type":"seq"}</text>
+      </description>
+    </arc>
+    <arc id="a134" source="tr30" target="pl26">
+      <name>
+        <text>tr30 -&gt; pl26</text>
+      </name>
+      <description>
+        <text>{"arc_type":"seq"}</text>
+      </description>
+    </arc>
+    <arc id="a135" source="pl26" target="tr31">
+      <name>
+        <text>pl26 -&gt; tr31</text>
+      </name>
+      <description>
+        <text>{"arc_type":"seq"}</text>
+      </description>
+    </arc>
+    <arc id="a136" source="tr26" target="pl28">
+      <name>
+        <text>tr26 -&gt; pl28</text>
+      </name>
+      <description>
+        <text>{"arc_type":"seq"}</text>
+      </description>
+    </arc>
+    <arc id="a137" source="pl28" target="tr30">
+      <name>
+        <text>pl28 -&gt; tr30</text>
+      </name>
+      <description>
+        <text>{"arc_type":"seq"}</text>
+      </description>
+    </arc>
+    <arc id="a138" source="pl25" target="tr22">
+      <name>
+        <text>pl25 -&gt; tr22</text>
+      </name>
+      <description>
+        <text>{"arc_type":"or_split"}</text>
+      </description>
+    </arc>
+    <arc id="a139" source="tr31" target="pl5">
+      <name>
+        <text>tr31 -&gt; pl5</text>
+      </name>
+      <description>
+        <text>{"arc_type":"or_join"}</text>
+      </description>
+    </arc>
+    <arc id="a140" source="tr5" target="pl2">
+      <name>
+        <text>tr5 -&gt; pl2</text>
+      </name>
+      <description>
+        <text>{"arc_type":"seq"}</text>
+      </description>
+    </arc>
+    <arc id="a150" source="pl2" target="tr20">
+      <name>
+        <text>pl2 -&gt; tr20</text>
+      </name>
+      <description>
+        <text>{"arc_type":"seq"}</text>
+      </description>
+    </arc>
+  </net>
+</pnml>

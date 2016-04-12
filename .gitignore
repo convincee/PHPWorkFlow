@@ -1,0 +1,10 @@
+/artifacts/TestWorkFlow.testTriggers*.pnml
+/artifacts/UseCase.*.pnml
+/artifacts/WorkFlow.*.pnml
+/artifacts/TestWorkFlow.testCreateWorkFlow.pnml
+/composer.lock
+/vendor/
+/.idea/
+/mysql.dump.20150813.sql
+/htdocs/WorkFlowApp/templates_c
+/propel

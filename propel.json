@@ -1,0 +1,32 @@
+{
+  "propel": {
+    "database": {
+      "connections": {
+        "PHPWorkFlow": {
+          "adapter": "mysql",
+          "classname": "Propel\\Runtime\\Connection\\DebugPDO",
+          "dsn": "mysql:host=localhost;dbname=PHPWorkFlow",
+          "user": "PHPWorkFlow_user",
+          "password": "W1sc0ns1n",
+          "attributes": []
+        }
+      }
+    },
+    "runtime": {
+      "defaultConnection": "PHPWorkFlow",
+      "connections": ["PHPWorkFlow"]
+    },
+    "generator": {
+      "defaultConnection": "PHPWorkFlow",
+      "connections": ["PHPWorkFlow"]
+    },
+    "paths": {
+      "outputDir": "src",
+      "phpDir": "src",
+      "phpConfDir": "src",
+      "sqlDir": "src"
+
+
+    }
+  }
+}

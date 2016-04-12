@@ -1,0 +1,23 @@
+<configuration xmlns="http://logging.apache.org/log4php/">
+    <appender name="workflowappender" class="LoggerAppenderFile">
+        <param name="file" value="/var/log/apache2/workflow.log" />
+    </appender>
+    <appender name="workflowtriggerappender" class="LoggerAppenderFile">
+        <param name="file" value="/var/log/apache2/workflowtriggers.log" />
+    </appender>
+
+    <root>
+        <level value="TRACE" />
+    </root>
+
+    <logger name="workflow">
+        <level value="TRACE" />
+        <appender_ref ref="workflowappender" />
+    </logger>
+
+    <logger name="workflowtrigger">
+        <level value="TRACE" />
+        <appender_ref ref="workflowtriggerappender" />
+    </logger>
+
+</configuration>

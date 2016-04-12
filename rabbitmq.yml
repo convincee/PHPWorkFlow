@@ -1,0 +1,22 @@
+##########################################################################
+#
+# READ ME - READ ME - READ ME - READ ME - READ ME - READ ME - READ ME - READ ME
+# THIS MEANS YOU !!!!!!!!!!!!!!!!!!!!!!! Not Kidding!!!
+# READ ME - READ ME - READ ME - READ ME - READ ME - READ ME - READ ME - READ ME
+#
+# any changes to this file require a Jira Ticket to OPS warning them of the change!!!!!
+# Please create tickets that are set to Blocker so that Ops can take care of
+# them right away as we are deploying more often now and could cause deployment issues.
+#
+##########################################################################
+localhost:
+  username: guest
+  password: guest
+  host: localhost
+  port: 5672
+
+development:
+  username: guest
+  password: guest
+  host: localhost
+  port:

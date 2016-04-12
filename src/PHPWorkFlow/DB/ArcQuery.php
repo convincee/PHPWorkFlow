@@ -1,0 +1,20 @@
+<?php
+
+namespace PHPWorkFlow\DB;
+
+use PHPWorkFlow\DB\Base\ArcQuery as BaseArcQuery;
+
+/**
+ * Skeleton subclass for performing query and update operations on the 'PHPWF_arc' table.
+ *
+ *
+ *
+ * You should add additional methods to this class to meet the
+ * application requirements.  This class will only be generated as
+ * long as it does not already exist in the output directory.
+ *
+ */
+class ArcQuery extends BaseArcQuery
+{
+
+}

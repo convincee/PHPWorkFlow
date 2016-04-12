@@ -1,0 +1,13 @@
+localhost:
+  memcache_ttl: 36000
+  memcache_size_min: 2000
+  memcache_save_min: .25
+  memcache_host: [localhost]
+  memcache_use_cache: true
+
+development:
+  memcache_ttl: 36000
+  memcache_size_min: 2000
+  memcache_save_min: .25
+  memcache_host: localhost
+  memcache_use_cache: true

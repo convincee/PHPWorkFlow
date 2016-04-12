@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<database name="PHPWorkFlow" defaultIdMethod="native" defaultPhpNamingMethod="underscore"  namespace="PHPWorkFlow\DB">
+  <table name="PHPWF_arc" idMethod="native" phpName="Arc">
+    <column name="arc_id" phpName="ArcId" type="INTEGER" primaryKey="true" autoIncrement="true" required="true"/>
+    <column name="work_flow_id" phpName="WorkFlowId" type="INTEGER" required="true"/>
+    <column name="transition_id" phpName="TransitionId" type="INTEGER" required="true"/>
+    <column name="place_id" phpName="PlaceId" type="INTEGER" required="true"/>
+    <column name="direction" phpName="Direction" type="VARCHAR" size="255" required="true"/>
+    <column name="arc_type" phpName="ArcType" type="VARCHAR" size="32" required="true"/>
+    <column name="description" phpName="Description" type="VARCHAR" size="255"/>
+    <column name="name" phpName="Name" type="VARCHAR" size="255" required="true"/>
+    <column name="yasper_name" phpName="YasperName" type="VARCHAR" size="255" required="true"/>
+    <column name="created_at" phpName="CreatedAt" type="TIMESTAMP" required="true"/>
+    <column name="created_by" phpName="CreatedBy" type="INTEGER" required="true" defaultValue="0"/>
+    <column name="modified_at" phpName="ModifiedAt" type="TIMESTAMP" required="true"/>
+    <column name="modified_by" phpName="ModifiedBy" type="INTEGER" required="true" defaultValue="0"/>
+    <foreign-key foreignTable="PHPWF_work_flow" name="arc_work_flow_id_fk" onDelete="CASCADE" onUpdate="CASCADE">
+      <reference local="work_flow_id" foreign="work_flow_id" />
+    </foreign-key>
+    <foreign-key foreignTable="PHPWF_transition" name="arc_transition_id_fk" onDelete="CASCADE" onUpdate="CASCADE">
+      <reference local="transition_id" foreign="transition_id"  />
+    </foreign-key>
+    <foreign-key foreignTable="PHPWF_place" name="arc_place_id_fk" onDelete="CASCADE" onUpdate="CASCADE">
+      <reference local="place_id" foreign="place_id"/>
+    </foreign-key>
+    <index name="arc_transition_id_i">
+      <index-column name="transition_id"/>
+    </index>
+    <index name="arc_place_id_i">
+      <index-column name="place_id"/>
+    </index>
+    <unique name="arc_work_flow_id_transition_id_place_id_direction_i">
+      <unique-column name="work_flow_id"/>
+      <unique-column name="transition_id"/>
+      <unique-column name="place_id"/>
+      <unique-column name="direction"/>
+    </unique>
+    <unique name="arc_work_flow_id_name_i">
+      <unique-column name="work_flow_id"/>
+      <unique-column name="name"/>
+    </unique>
+    <unique name="arc_work_flow_id_yasper_name_i">
+      <unique-column name="work_flow_id"/>
+      <unique-column name="yasper_name"/>
+    </unique>
+    <vendor type="mysql">
+      <parameter name="Engine" value="InnoDB"/>
+    </vendor>
+  </table>
+  <table name="PHPWF_command" idMethod="native" phpName="Command">
+    <column name="command_id" phpName="CommandId" type="INTEGER" primaryKey="true" autoIncrement="true" required="true"/>
+    <column name="transition_id" phpName="TransitionId" type="INTEGER" required="true"/>
+    <column name="command_string" phpName="CommandString" type="VARCHAR" size="255" required="true"/>
+    <column name="command_seq" phpName="CommandSeq" type="INTEGER" required="true"/>
+    <column name="created_at" phpName="CreatedAt" type="TIMESTAMP" required="true"/>
+    <column name="created_by" phpName="CreatedBy" type="INTEGER" required="true" defaultValue="0"/>
+    <column name="modified_at" phpName="ModifiedAt" type="TIMESTAMP" required="true"/>
+    <column name="modified_by" phpName="ModifiedBy" type="INTEGER" required="true" defaultValue="0"/>
+    <foreign-key foreignTable="PHPWF_transition" name="command_transition_id_fk" onDelete="CASCADE" onUpdate="CASCADE">
+      <reference local="transition_id" foreign="transition_id"/>
+    </foreign-key>
+    <vendor type="mysql">
+      <parameter name="Engine" value="InnoDB"/>
+    </vendor>
+  </table>
+  <table name="PHPWF_gate" idMethod="native" phpName="Gate">
+    <column name="gate_id" phpName="GateId" type="INTEGER" primaryKey="true" autoIncrement="true" required="true"/>
+    <column name="transition_id" phpName="TransitionId" type="INTEGER" required="true"/>
+    <column name="target_yasper_name" phpName="TargetYasperName" type="VARCHAR" size="255" required="true"/>
+    <column name="value" phpName="Value" required="true" type="VARCHAR" size="255"/>
+    <column name="created_at" phpName="CreatedAt" type="TIMESTAMP" required="true"/>
+    <column name="created_by" phpName="CreatedBy" type="INTEGER" required="true" defaultValue="0"/>
+    <column name="modified_at" phpName="ModifiedAt" type="TIMESTAMP" required="true"/>
+    <column name="modified_by" phpName="ModifiedBy" type="INTEGER" required="true" defaultValue="0"/>
+    <foreign-key foreignTable="PHPWF_transition" name="gate_transition_id_fk" onDelete="CASCADE" onUpdate="CASCADE">
+      <reference local="transition_id" foreign="transition_id"/>
+    </foreign-key>
+    <unique name="gate_transition_id_value_target_yasper_name_i">
+      <unique-column name="transition_id"/>
+      <unique-column name="value"/>
+      <unique-column name="target_yasper_name"/>
+    </unique>
+    <vendor type="mysql">
+      <parameter name="Engine" value="InnoDB"/>
+    </vendor>
+  </table>
+  <table name="PHPWF_notification" idMethod="native" phpName="Notification">
+    <column name="notification_id" phpName="NotificationId" type="INTEGER" primaryKey="true" autoIncrement="true" required="true"/>
+    <column name="transition_id" phpName="TransitionId" type="INTEGER" required="true"/>
+    <column name="notification_type" phpName="NotificationType" required="true" type="VARCHAR" size="32"/>
+    <column name="notification_string" phpName="NotificationString" required="true" type="VARCHAR" size="255"/>
+    <column name="created_at" phpName="CreatedAt" type="TIMESTAMP" required="true"/>
+    <column name="created_by" phpName="CreatedBy" type="INTEGER" required="true" defaultValue="0"/>
+    <column name="modified_at" phpName="ModifiedAt" type="TIMESTAMP" required="true"/>
+    <column name="modified_by" phpName="ModifiedBy" type="INTEGER" required="true" defaultValue="0"/>
+    <foreign-key foreignTable="PHPWF_transition" name="notification_transition_id_fk" onDelete="CASCADE" onUpdate="CASCADE">
+      <reference local="transition_id" foreign="transition_id"/>
+    </foreign-key>
+    <unique name="notification_transition_id_notification_type_notification_string+i">
+      <unique-column name="transition_id"/>
+      <unique-column name="notification_type"/>
+      <unique-column name="notification_string"/>
+    </unique>
+    <vendor type="mysql">
+      <parameter name="Engine" value="InnoDB"/>
+    </vendor>
+  </table>
+  <table name="PHPWF_place" idMethod="native" phpName="Place">
+    <column name="place_id" phpName="PlaceId" type="INTEGER" primaryKey="true" autoIncrement="true" required="true"/>
+    <column name="work_flow_id" phpName="WorkFlowId" type="INTEGER" required="true"/>
+    <column name="place_type" phpName="PlaceType" type="VARCHAR" size="32" required="true"/>
+    <column name="name" phpName="Name" type="VARCHAR" size="255" required="true"/>
+    <column name="description" phpName="Description" type="VARCHAR" size="255" required="true"/>
+    <column name="position_x" phpName="PositionX" type="INTEGER" required="true" defaultValue="0"/>
+    <column name="position_y" phpName="PositionY" type="INTEGER" required="true" defaultValue="0"/>
+    <column name="dimension_x" phpName="DimensionX" type="INTEGER" required="true" defaultValue="0"/>
+    <column name="dimension_y" phpName="DimensionY" type="INTEGER" required="true" defaultValue="0"/>
+    <column name="yasper_name" phpName="YasperName" type="VARCHAR" size="255" required="true"/>
+    <column name="created_at" phpName="CreatedAt" type="TIMESTAMP" required="true"/>
+    <column name="created_by" phpName="CreatedBy" type="INTEGER" required="true" defaultValue="0"/>
+    <column name="modified_at" phpName="ModifiedAt" type="TIMESTAMP" required="true"/>
+    <column name="modified_by" phpName="ModifiedBy" type="INTEGER" required="true" defaultValue="0"/>
+    <foreign-key foreignTable="PHPWF_work_flow" name="place_work_flow_id_fk" onDelete="CASCADE" onUpdate="CASCADE">
+      <reference local="work_flow_id" foreign="work_flow_id"/>
+    </foreign-key>
+    <unique name="place_work_flow_id_name_i">
+      <unique-column name="work_flow_id"/>
+      <unique-column name="name"/>
+    </unique>
+    <unique name="place_work_flow_id_yasper_name_i">
+      <unique-column name="work_flow_id"/>
+      <unique-column name="yasper_name"/>
+    </unique>
+    <vendor type="mysql">
+      <parameter name="Engine" value="InnoDB"/>
+    </vendor>
+  </table>
+  <table name="PHPWF_route" idMethod="native" phpName="Route">
+    <column name="route_id" phpName="RouteId" type="INTEGER" primaryKey="true" autoIncrement="true" required="true"/>
+    <column name="transition_id" phpName="TransitionId" type="INTEGER" required="true"/>
+    <column name="route" phpName="Route" required="true" type="VARCHAR" size="255"/>
+    <column name="created_at" phpName="CreatedAt" type="TIMESTAMP" required="true"/>
+    <column name="created_by" phpName="CreatedBy" type="INTEGER" required="true" defaultValue="0"/>
+    <column name="modified_at" phpName="ModifiedAt" type="TIMESTAMP" required="true"/>
+    <column name="modified_by" phpName="ModifiedBy" type="INTEGER" required="true" defaultValue="0"/>
+    <foreign-key foreignTable="PHPWF_transition" name="route_transition_id_fk" onDelete="CASCADE" onUpdate="CASCADE">
+      <reference local="transition_id" foreign="transition_id"/>
+    </foreign-key>
+    <unique name="route_transition_id_route_i">
+      <unique-column name="transition_id"/>
+      <unique-column name="route"/>
+    </unique>
+    <vendor type="mysql">
+      <parameter name="Engine" value="InnoDB"/>
+    </vendor>
+  </table>
+  <table name="PHPWF_token" idMethod="native" phpName="Token">
+    <column name="token_id" phpName="TokenId" type="INTEGER" primaryKey="true" autoIncrement="true" required="true"/>
+    <column name="use_case_id" phpName="UseCaseId" type="INTEGER" required="true"/>
+    <column name="place_id" phpName="PlaceId" type="INTEGER" required="true"/>
+    <column name="creating_work_item_id" phpName="CreatingWorkItemId" type="INTEGER"/>
+    <column name="consuming_work_item_id" phpName="ConsumingWorkItemId" type="INTEGER"/>
+    <column name="token_status" phpName="TokenStatus" type="VARCHAR" size="255" required="true"/>
+    <column name="enabled_date" phpName="EnabledDate" type="TIMESTAMP" required="true"/>
+    <column name="cancelled_date" phpName="CancelledDate" type="TIMESTAMP"/>
+    <column name="consumed_date" phpName="ConsumedDate" type="TIMESTAMP"/>
+    <column name="created_at" phpName="CreatedAt" type="TIMESTAMP" required="true"/>
+    <column name="created_by" phpName="CreatedBy" type="INTEGER" required="true" defaultValue="0"/>
+    <column name="modified_at" phpName="ModifiedAt" type="TIMESTAMP" required="true"/>
+    <column name="modified_by" phpName="ModifiedBy" type="INTEGER" required="true" defaultValue="0"/>
+    <foreign-key foreignTable="PHPWF_use_case" name="token_use_case_id_fk" onDelete="CASCADE" onUpdate="CASCADE">
+      <reference local="use_case_id" foreign="use_case_id"/>
+    </foreign-key>
+    <foreign-key foreignTable="PHPWF_work_item" name="token_creating_work_item_id_fk" onDelete="CASCADE" onUpdate="CASCADE" phpName="CreatingWorkItem" refPhpName="CreatingWorkItem" >
+      <reference local="creating_work_item_id" foreign="work_item_id"/>
+    </foreign-key>
+    <foreign-key foreignTable="PHPWF_work_item" name="token_consuming_work_item_id_fk" onDelete="CASCADE" onUpdate="CASCADE" phpName="ConsumingWorkItem" refPhpName="ConsumingWorkItem" >
+      <reference local="consuming_work_item_id" foreign="work_item_id"/>
+    </foreign-key>
+    <foreign-key foreignTable="PHPWF_place" name="token_place_id_fk"  onDelete="CASCADE" onUpdate="CASCADE">
+      <reference local="place_id" foreign="place_id"/>
+    </foreign-key>
+    <index name="token_place_id_fk">
+      <index-column name="place_id"/>
+    </index>
+    <vendor type="mysql">
+      <parameter name="Engine" value="InnoDB"/>
+    </vendor>
+  </table>
+  <table name="PHPWF_transition" idMethod="native" phpName="Transition">
+    <column name="transition_id" phpName="TransitionId" type="INTEGER" primaryKey="true" autoIncrement="true" required="true"/>
+    <column name="work_flow_id" phpName="WorkFlowId" type="INTEGER" required="true"/>
+    <column name="name" phpName="Name" type="VARCHAR" size="255" required="true"/>
+    <column name="description" phpName="Description" type="VARCHAR" size="1023" required="true"/>
+    <column name="transition_type" phpName="TransitionType" required="true" type="VARCHAR" size="255"/>
+    <column name="transition_trigger_method" phpName="TransitionTriggerMethod" required="true" type="VARCHAR" size="255"/>
+    <column name="position_x" phpName="PositionX" type="INTEGER" required="true" defaultValue="0"/>
+    <column name="position_y" phpName="PositionY" type="INTEGER" required="true" defaultValue="0"/>
+    <column name="dimension_x" phpName="DimensionX" type="INTEGER" required="true" defaultValue="0"/>
+    <column name="dimension_y" phpName="DimensionY" type="INTEGER" required="true" defaultValue="0"/>
+    <column name="yasper_name" phpName="YasperName" type="VARCHAR" size="255" required="true"/>
+    <column name="time_delay" phpName="TimeDelay" type="INTEGER"/>
+    <column name="created_at" phpName="CreatedAt" type="TIMESTAMP" required="true"/>
+    <column name="created_by" phpName="CreatedBy" type="INTEGER" required="true" defaultValue="0"/>
+    <column name="modified_at" phpName="ModifiedAt" type="TIMESTAMP" required="true"/>
+    <column name="modified_by" phpName="ModifiedBy" type="INTEGER" required="true" defaultValue="0"/>
+    <foreign-key foreignTable="PHPWF_work_flow" name="transition_work_flow_id_fk" onDelete="CASCADE" onUpdate="CASCADE">
+      <reference local="work_flow_id" foreign="work_flow_id"/>
+    </foreign-key>
+    <unique name="transition_work_flow_id_name_i">
+      <unique-column name="work_flow_id"/>
+      <unique-column name="name"/>
+    </unique>
+    <unique name="transition_work_flow_id_transition_trigger_method_i">
+      <unique-column name="work_flow_id"/>
+      <unique-column name="transition_trigger_method"/>
+    </unique>
+    <unique name="transition_work_flow_id_yasper_name_i">
+      <unique-column name="work_flow_id"/>
+      <unique-column name="yasper_name"/>
+    </unique>
+    <vendor type="mysql">
+      <parameter name="Engine" value="InnoDB"/>
+    </vendor>
+  </table>
+  <table name="PHPWF_trigger_fulfillment" idMethod="native" phpName="TriggerFulfillment">
+    <column name="trigger_fulfillment_id" phpName="TriggerFulfillmentId" type="INTEGER" primaryKey="true" autoIncrement="true" required="true"/>
+    <column name="use_case_id" phpName="UseCaseId" type="INTEGER" required="true"/>
+    <column name="transition_id" phpName="TransitionId" type="INTEGER" required="true"/>
+    <column name="trigger_fulfillment_status" phpName="TriggerFulfillmentStatus" type="VARCHAR" size="32" required="true"/>
+    <column name="created_at" phpName="CreatedAt" type="TIMESTAMP" required="true"/>
+    <column name="created_by" phpName="CreatedBy" type="INTEGER" required="true" defaultValue="0"/>
+    <column name="modified_at" phpName="ModifiedAt" type="TIMESTAMP" required="true"/>
+    <column name="modified_by" phpName="ModifiedBy" type="INTEGER" required="true" defaultValue="0"/>
+    <foreign-key foreignTable="PHPWF_use_case" name="trigger_fulfillment_use_case_id_fk" onDelete="CASCADE" onUpdate="CASCADE">
+      <reference local="use_case_id" foreign="use_case_id"/>
+    </foreign-key>
+    <foreign-key foreignTable="PHPWF_transition" name="trigger_fulfillment_transition_id_fk" onDelete="CASCADE" onUpdate="CASCADE">
+      <reference local="transition_id" foreign="transition_id"/>
+    </foreign-key>
+    <vendor type="mysql">
+      <parameter name="Engine" value="InnoDB"/>
+    </vendor>
+  </table>
+  <table name="PHPWF_use_case" idMethod="native" phpName="UseCase">
+    <column name="use_case_id" phpName="UseCaseId" type="INTEGER" primaryKey="true" autoIncrement="true" required="true"/>
+    <column name="work_flow_id" phpName="WorkFlowId" type="INTEGER" required="true"/>
+    <column name="parent_use_case_id" phpName="ParentUseCaseId" type="INTEGER" required="false"/>
+    <column name="name" phpName="Name" type="VARCHAR" size="255" required="true"/>
+    <column name="description" phpName="Description" type="VARCHAR" size="255"/>
+    <column name="use_case_group" phpName="UseCaseGroup" type="VARCHAR" size="255"  required="false"/>
+    <column name="use_case_status" phpName="UseCaseStatus" type="VARCHAR" size="255" required="true"/>
+    <column name="start_date" phpName="StartDate" type="TIMESTAMP" required="true"/>
+    <column name="end_date" phpName="EndDate" type="TIMESTAMP" required="true"/>
+    <column name="created_at" phpName="CreatedAt" type="TIMESTAMP" required="true"/>
+    <column name="created_by" phpName="CreatedBy" type="INTEGER" required="true" defaultValue="0"/>
+    <column name="modified_at" phpName="ModifiedAt" type="TIMESTAMP" required="true"/>
+    <column name="modified_by" phpName="ModifiedBy" type="INTEGER" required="true" defaultValue="0"/>
+    <foreign-key foreignTable="PHPWF_use_case" onDelete="CASCADE"  onUpdate="CASCADE" >
+      <reference local="parent_use_case_id" name="use_case_parent_use_case_id_fk"  foreign="use_case_id"/>
+    </foreign-key>
+    <foreign-key foreignTable="PHPWF_work_flow" name="use_case_work_flow_id_fk" onDelete="CASCADE" onUpdate="CASCADE">
+      <reference local="work_flow_id" foreign="work_flow_id"/>
+    </foreign-key>
+    <index name="use_case_work_flow_id_fk">
+      <index-column name="work_flow_id"/>
+    </index>
+    <index name="use_case_use_case_status_in">
+      <index-column name="use_case_status"/>
+    </index>
+    <vendor type="mysql">
+      <parameter name="Engine" value="InnoDB"/>
+    </vendor>
+  </table>
+  <table name="PHPWF_use_case_context" idMethod="native" phpName="UseCaseContext">
+    <column name="use_case_context_id" phpName="UseCaseContextId" type="INTEGER" primaryKey="true" autoIncrement="true" required="true"/>
+    <column name="use_case_id" phpName="UseCaseId" type="INTEGER" required="true"/>
+    <column name="name" phpName="Name" type="VARCHAR" size="255" required="true"/>
+    <column name="description" phpName="Description" type="VARCHAR" size="255"/>
+    <column name="value" phpName="Value" type="VARCHAR" size="255"/>
+    <column name="created_at" phpName="CreatedAt" type="TIMESTAMP" required="true"/>
+    <column name="created_by" phpName="CreatedBy" type="INTEGER" required="true" defaultValue="0"/>
+    <column name="modified_at" phpName="ModifiedAt" type="TIMESTAMP" required="true"/>
+    <column name="modified_by" phpName="ModifiedBy" type="INTEGER" required="true" defaultValue="0"/>
+    <foreign-key foreignTable="PHPWF_use_case" name="use_case_context_use_case_id_fk" onDelete="CASCADE" onUpdate="CASCADE">
+      <reference local="use_case_id" foreign="use_case_id"/>
+    </foreign-key>
+    <index name="use_case_context_use_case_id_fk">
+      <index-column name="use_case_id"/>
+    </index>
+    <unique name="use_case_context_use_case_id_name_i">
+      <unique-column name="use_case_id"/>
+      <unique-column name="name"/>
+    </unique>
+    <vendor type="mysql">
+      <parameter name="Engine" value="InnoDB"/>
+    </vendor>
+  </table>
+  <table name="PHPWF_work_flow" idMethod="native" phpName="WorkFlow">
+    <column name="work_flow_id" phpName="WorkFlowId" type="INTEGER" primaryKey="true" autoIncrement="true" required="true"/>
+    <column name="name" phpName="Name" type="VARCHAR" size="255" required="true"/>
+    <column name="description" phpName="Description" type="LONGVARCHAR" required="true"/>
+    <column name="trigger_class" phpName="TriggerClass" type="LONGVARCHAR" required="true"/>
+    <column name="created_at" phpName="CreatedAt" type="TIMESTAMP" required="true"/>
+    <column name="created_by" phpName="CreatedBy" type="INTEGER" required="true" defaultValue="0"/>
+    <column name="modified_at" phpName="ModifiedAt" type="TIMESTAMP" required="true"/>
+    <column name="modified_by" phpName="ModifiedBy" type="INTEGER" required="true" defaultValue="0"/>
+    <unique name="work_flow_on_name_i">
+      <unique-column name="name"/>
+    </unique>
+    <vendor type="mysql">
+      <parameter name="Engine" value="InnoDB"/>
+    </vendor>
+  </table>
+  <table name="PHPWF_work_item" idMethod="native" phpName="WorkItem">
+    <column name="work_item_id" phpName="WorkItemId" type="INTEGER" primaryKey="true" autoIncrement="true" required="true"/>
+    <column name="use_case_id" phpName="UseCaseId" type="INTEGER" required="true"/>
+    <column name="transition_id" phpName="TransitionId" type="INTEGER" required="true"/>
+    <column name="work_item_status" phpName="WorkItemStatus" type="VARCHAR" size="255" required="true"/>
+    <column name="enabled_date" phpName="EnabledDate" type="TIMESTAMP" required="true"/>
+    <column name="cancelled_date" phpName="CancelledDate" type="TIMESTAMP"/>
+    <column name="finished_date" phpName="FinishedDate" type="TIMESTAMP"/>
+    <column name="created_at" phpName="CreatedAt" type="TIMESTAMP" required="true"/>
+    <column name="created_by" phpName="CreatedBy" type="INTEGER" required="true" defaultValue="0"/>
+    <column name="modified_at" phpName="ModifiedAt" type="TIMESTAMP" required="true"/>
+    <column name="modified_by" phpName="ModifiedBy" type="INTEGER" required="true" defaultValue="0"/>
+    <foreign-key foreignTable="PHPWF_use_case" name="work_item_use_case_id_fk" onDelete="CASCADE" onUpdate="CASCADE">
+      <reference local="use_case_id" foreign="use_case_id"/>
+    </foreign-key>
+    <foreign-key foreignTable="PHPWF_transition" name="work_item_transition_id_fk" onDelete="CASCADE" onUpdate="CASCADE">
+      <reference local="transition_id" foreign="transition_id"/>
+    </foreign-key>
+    <foreign-key foreignTable="PHPWF_arc" name="work_item_arc_transition_id_fk" onDelete="CASCADE" onUpdate="CASCADE">
+      <reference local="transition_id" foreign="transition_id"/>
+    </foreign-key>
+    <index name="work_item_transition_id_fk">
+      <index-column name="transition_id"/>
+    </index>
+    <vendor type="mysql">
+      <parameter name="Engine" value="InnoDB"/>
+    </vendor>
+  </table>
+</database>
